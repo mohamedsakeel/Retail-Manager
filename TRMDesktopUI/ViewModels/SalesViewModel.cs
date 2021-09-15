@@ -22,12 +22,39 @@ namespace TRMDesktopUI.ViewModels
             }
         }
 
+        private BindingList<string> _cart;
+
+        public BindingList<string> Cart
+        {
+            get { return _cart; }
+            set
+            {
+                _cart = value;
+                NotifyOfPropertyChange(() => Cart);
+            }
+        }
+
+        //cart list
+
+
+        private int _itemQuantity;
+
+        public int ItemQuantity
+        {
+            get { return _itemQuantity; }
+            set
+            {
+                _itemQuantity = value;
+                NotifyOfPropertyChange(() => ItemQuantity);
+            }
+        }
+
         public string SubTotal
         {
             get
             {
                 //TODO - Replace with calculation
-                return = "$0.00";
+                return "$0.00";
             }
         }
 
@@ -36,7 +63,7 @@ namespace TRMDesktopUI.ViewModels
             get
             {
                 //TODO - Replace with calculation
-                return = "$0.00";
+                return "$0.00";
             }
         }
 
@@ -45,38 +72,9 @@ namespace TRMDesktopUI.ViewModels
             get
             {
                 //TODO - Replace with calculation
-                return = "$0.00";
+                return "$0.00";
             }
         }
-
-
-        //cart list
-
-        private BindingList<string> _cart;
-
-        public BindingList<string> Cart
-        {
-            get { return _cart; }
-            set 
-            { 
-                _cart = value;
-                NotifyOfPropertyChange(() => Cart);
-            }
-        }
-
-
-        private string _itemQuantity;
-
-        public string ItemQuantity
-        {
-            get { return _itemQuantity; }
-            set 
-            { 
-                _itemQuantity = value;
-                NotifyOfPropertyChange(() => ItemQuantity);
-            }
-        }
-
 
 
         public bool CanAddToCart

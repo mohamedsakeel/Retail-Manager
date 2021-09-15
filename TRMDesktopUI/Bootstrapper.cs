@@ -43,7 +43,7 @@ namespace TRMDesktopUI
                 .Where(type => type.Name.EndsWith("ViewModel"))     //getting all the classes that end in view model
                 .ToList() 
                 .ForEach(viewModelType => _container.RegisterPerRequest(
-                    viewModelType, viewModelType.ToString(), viewModelType)); 
+                    viewModelType, viewModelType.ToString(), viewModelType));
         }
 
         protected override void OnStartup(object sender, StartupEventArgs e)
@@ -53,7 +53,7 @@ namespace TRMDesktopUI
 
         protected override object GetInstance(Type service, string key)
         {
-            return _container.GetInstance(service, key);  
+            return _container.GetInstance(service, key);
         }
 
         protected override IEnumerable<object> GetAllInstances(Type service)
