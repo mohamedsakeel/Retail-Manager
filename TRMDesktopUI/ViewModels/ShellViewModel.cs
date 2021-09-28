@@ -13,6 +13,7 @@ namespace TRMDesktopUI.ViewModels
         private IEventAggregator _events;
         private SalesViewModel _salesVM;
         private SimpleContainer _container;
+
         public ShellViewModel(IEventAggregator events, SalesViewModel salesVM, SimpleContainer container)
         {
             _events = events;
