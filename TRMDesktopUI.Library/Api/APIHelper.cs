@@ -26,7 +26,7 @@ namespace TRMDesktopUI.Library.Api
         {
             get
             {
-                return ApiClient;
+                return _apiClient; 
             }
         }
 
